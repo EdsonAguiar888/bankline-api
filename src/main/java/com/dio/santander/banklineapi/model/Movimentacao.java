@@ -9,6 +9,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import java.time.LocalDateTime;
+
+
 @Entity 	 
 @Table(name = "tab_movimentacao")
 public class Movimentacao {
@@ -28,12 +31,13 @@ public class Movimentacao {
 	private MovimentacaoTipo tipo;
 	
 	
+	
 	public Integer getId() {
 		return id;
 	}
 	public void setId(Integer id) {
 		this.id = id;
-	}
+	}	
 	public LocalDateTime getDataHora() {
 		return dataHora;
 	}
