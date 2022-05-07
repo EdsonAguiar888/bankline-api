@@ -20,16 +20,19 @@ public class MovimentacaoService {
 		
 		Movimentacao movimentacao = new Movimentacao();
 		
-		Double valor = novaMovimentacao.getTipo()==MovimentacaoTipo.RECEITA ? novaMovimentacao.getValor() : novaMovimentacao.getValor() * -1;
+		//Double valor = novaMovimentacao.getTipo()==MovimentacaoTipo.RECEITA ? novaMovimentacao.getValor() : novaMovimentacao.getValor() * -1;
 		
-		//Double valor = novaMovimentacao.getValor();
-		//if(novaMovimentacao.getTipo()==MovimentacaoTipo.DESPESA)
-		//	valor = valor * -1;
+		Double valor = novaMovimentacao.getValor();
+		if(novaMovimentacao.getTipo()==MovimentacaoTipo.DESPESA)
+			valor = valor * -1;
 			
 		movimentacao.setDataHora(LocalDateTime.now());
 		movimentacao.setDescricao(novaMovimentacao.getDescricao());
+		movimentacao.setIdConta(novaMovimentacao.getIdConta());
 		movimentacao.setTipo(novaMovimentacao.getTipo());
-		movimentacao.setValor(novaMovimentacao.getValor());
+		movimentacao.setValor(valor);
+		
+		repository.save(movimentacao);
 		
 		
 	}

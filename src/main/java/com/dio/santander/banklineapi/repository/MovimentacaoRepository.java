@@ -6,4 +6,6 @@ import com.dio.santander.banklineapi.model.Movimentacao;
 
 public interface MovimentacaoRepository extends JpaRepository<Movimentacao, Integer> {
 
+	 
+
 }

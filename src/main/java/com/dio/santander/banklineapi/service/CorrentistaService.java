@@ -2,9 +2,7 @@ package com.dio.santander.banklineapi.service;
 
 import java.util.Date;
 
-import org.apache.catalina.startup.ClassLoaderFactory.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.support.Repositories;
 import org.springframework.stereotype.Service;
 
 import com.dio.santander.banklineapi.dto.NovoCorrentista;
