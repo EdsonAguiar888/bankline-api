@@ -28,7 +28,7 @@ public class CorrentistaService {
 		conta.setNumero(new Date().getTime());
 		
 		correntista.setConta(conta);
-		repepository.save(correntista)
+		repepository.save(correntista);
 		
 	}
 }
